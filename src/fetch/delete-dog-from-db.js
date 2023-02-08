@@ -1,5 +1,6 @@
+import { API_CONFIG } from "./config";
 export const deleteDogFromDb = (dogId) => {
-  return fetch(`http://localhost:3000/dogs/${dogId}`, {
+  return fetch(`${API_CONFIG.baseUrl}/${dogId}`, {
     method: "delete",
   });
 };
